@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://byton3y804lhj"]
+
+[ext_resource type="Script" path="res://scenes/mainMenu.gd" id="1_v18lr"]
+[ext_resource type="Texture2D" uid="uid://dt5qgpjd8c7xw" path="res://asset/Yellow.png" id="2_l3v1j"]
+[ext_resource type="Texture2D" uid="uid://dwvftvbpm1u14" path="res://asset/cooltext463136850353171.png" id="3_gngnc"]
+
+[node name="mainMenu" type="Node"]
+script = ExtResource("1_v18lr")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l3v1j")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
+texture_filter = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -304.0
+offset_right = 372.0
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_gngnc")
+
+[node name="level2" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -222.0
+offset_top = -148.0
+offset_right = -164.0
+offset_bottom = -117.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+size_flags_horizontal = 0
+text = "Level2"
+
+[node name="level1" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = -148.0
+offset_right = 119.0
+offset_bottom = -117.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+size_flags_horizontal = 0
+text = "Level1"
+
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
